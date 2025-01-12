@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Article;
 use Illuminate\Http\Request;
 use App\Models\Subject;
+use App\Models\Schedule;
 use App\Models\Guru;
 use App\User;
 use Illuminate\Support\Facades\Auth;
