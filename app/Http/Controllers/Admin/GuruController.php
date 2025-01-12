@@ -134,7 +134,7 @@ class GuruController extends Controller
     public function destroy($id)
     {
         $guru = Guru::findOrFail($id);
-        Storage::delete('public/images/gurus/'.$student->avatar);
+        Storage::delete('public/images/gurus/'.$guru->avatar);
         Schedule::where('guru_id', $id)->delete();
         $guru->delete();
 

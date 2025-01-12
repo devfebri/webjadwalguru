@@ -51,6 +51,5 @@ Jangan ragu untuk memeriksa halaman masalah jika Anda ingin berkontribusi. **Ber
 
 ------------
 
-- Thanks to <a href="https://devover.or.id">DevoverID</a>
 - DevFebri is open-sourced software licensed under the MIT license.
 
