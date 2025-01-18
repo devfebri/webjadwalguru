@@ -14,7 +14,7 @@
             <div class="col-md-8 offset-md-2">
                 <div class="hero-text text-center">
                     <div class="text-title">{{config('web_config')['HERO_TEXT_HEADER']}} <br> {{config('web_config')['WEB_TITLE']}}</div>
-                    <p>{{config('web_config')['HERO_TEXT_DESCRIPTION'] }}</p>
+                    {{-- <p>{{config('web_config')['HERO_TEXT_DESCRIPTION'] }}</p> --}}
                 </div>
             </div>
         </div>
