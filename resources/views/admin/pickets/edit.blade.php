@@ -33,15 +33,15 @@
                                             @csrf
                                             @method('PUT')
                                             <div class="form-group row">
-                                                <label for="" class='col-md-2 col-form-label'>Pilih siswa</label>
+                                                <label for="" class='col-md-2 col-form-label'>Pilih guru</label>
                                                 <div class="col-md-10">
-                                                    <select name="student" id="subjects" class="form-control @error('subject') is-invalid @enderror">
-                                                        <option value="">Pilih siswa..</option>
-                                                        @foreach($students as $student)
-                                                        <option value="{{ $student->id }}" {{$student->id == $picket->student_id ? 'selected' : ''}}>{{ $student->name }}</option>
+                                                    <select name="guru" id="subjects" class="form-control @error('subject') is-invalid @enderror">
+                                                        <option value="">Pilih guru..</option>
+                                                        @foreach($gurus as $guru)
+                                                        <option value="{{ $guru->id }}" {{$guru->id == $picket->guru_id ? 'selected' : ''}}>{{ $guru->name }}</option>
                                                         @endforeach
                                                     </select>
-                                                    @error('student')
+                                                    @error('guru')
                                                         <span class="invalid-feedback" role="alert">
                                                             <strong>{{ $message }}</strong>
                                                         </span>

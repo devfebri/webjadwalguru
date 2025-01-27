@@ -15,7 +15,7 @@ class CreatePicketsTable extends Migration
     {
         Schema::create('pickets', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('student_id');
+            $table->unsignedBigInteger('guru_id');
             $table->unsignedBigInteger('day_id');
             $table->timestamps();
         });

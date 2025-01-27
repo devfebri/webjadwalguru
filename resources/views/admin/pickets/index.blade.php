@@ -42,7 +42,7 @@
                                                         <option value="{{$day->id}}">{{ $day->name }}</option>
                                                         @endforeach
                                                     </select>
-                                                    <input type="text" class="form-control mr-2" placeholder="Cari nama siswa" name='search'>
+                                                    <input type="text" class="form-control mr-2" placeholder="Cari nama guru" name='search'>
                                                     <button type="submit" class='btn btn-primary'>Cari</button>
                                                 </form>
                                             </div>
@@ -59,7 +59,7 @@
                                                 <tr>
                                                     <th>#</th>
                                                     <th>Hari</th>
-                                                    <th>Nama Siswa</th>
+                                                    <th>Nama Guru</th>
                                                     <th>Action</th>
                                                 </tr>
                                                 </thead>
@@ -68,7 +68,7 @@
                                                         <tr>
                                                             <th scope="row">{{ $loop->iteration }}</th>
                                                             <td>{{ $picket->day->name }}</td>
-                                                            <td>{{ $picket->student->name }}</td>
+                                                            <td>{{ $picket->guru->name }}</td>
                                                             <td>
                                                                 <div class='d-inline-flex'>
                                                                     <a href="{{ route('admin.pickets.edit', ['picket' => $picket->id]) }}" class='btn btn-warning mr-2'><i class="bi bi-pencil-fill"></i></a>

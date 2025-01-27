@@ -32,15 +32,15 @@
                                         <form action="{{ route('admin.pickets.store') }}" method="POST" class='mt-3' >
                                             @csrf
                                             <div class="form-group row">
-                                                <label for="" class='col-md-2 col-form-label'>Pilih siswa</label>
+                                                <label for="" class='col-md-2 col-form-label'>Pilih Guru</label>
                                                 <div class="col-md-10">
-                                                    <select name="student" id="subjects" class="form-control @error('subject') is-invalid @enderror">
-                                                        <option value="">Pilih siswa..</option>
-                                                        @foreach($students as $student)
-                                                        <option value="{{ $student->id }}">{{ $student->name }}</option>
+                                                    <select name="guru" id="subjects" class="form-control @error('subject') is-invalid @enderror">
+                                                        <option value="">Pilih Guru..</option>
+                                                        @foreach($gurus as $guru)
+                                                        <option value="{{ $guru->id }}">{{ $guru->name }}</option>
                                                         @endforeach
                                                     </select>
-                                                    @error('student')
+                                                    @error('guru')
                                                         <span class="invalid-feedback" role="alert">
                                                             <strong>{{ $message }}</strong>
                                                         </span>

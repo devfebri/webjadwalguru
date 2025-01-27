@@ -25,14 +25,14 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Nama Siswa</th>
+                                    <th>Nama Guru</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach($day->pickets as $picket)
                                 <tr>
                                     <td>{{$loop->iteration}}</td>
-                                    <td>{{ $picket->student->name }}</td>
+                                    <td>{{ $picket->guru->name }}</td>
                                 </tr>
                                 @endforeach
                                 @forelse ($day->pickets as $picket)

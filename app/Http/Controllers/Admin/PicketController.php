@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Picket;
-use App\Models\Student;
+use App\Models\Guru;
 use App\Models\Day;
 
 class PicketController extends Controller
@@ -18,7 +18,7 @@ class PicketController extends Controller
     public function index(Request $request)
     {
         $search = $request->get('search');
-        $pickets = Picket::whereHas('student', function($q) use ($search) {
+        $pickets = Picket::whereHas('guru', function($q) use ($search) {
             $q->where('name','LIKE',"%$search%");
         })->orderBy('day_id','asc')->paginate(10);
         $pickets->appends(['search'=>$search]);
@@ -35,9 +35,9 @@ class PicketController extends Controller
      */
     public function create()
     {
-        $students = Student::all();
+        $gurus = Guru::all();
         $days = Day::all();
-        return view('admin.pickets.add', compact('students', 'days'));
+        return view('admin.pickets.add', compact('gurus', 'days'));
     }
 
     /**
@@ -49,12 +49,13 @@ class PicketController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'student' => 'required|exists:students,id',
+            'guru' => 'required|exists:students,id',
             'day' => 'required|exists:days,id',
         ]);
+        // dd($request->all());
 
         $create = Picket::create([
-            'student_id' => $request->student,
+            'guru_id' => $request->guru,
             'day_id' => $request->day,
         ]);
 
@@ -81,10 +82,10 @@ class PicketController extends Controller
      */
     public function edit($id)
     {
-        $students = Student::all();
+        $gurus = Guru::all();
         $days = Day::all();
         $picket = Picket::findOrFail($id);
-        return view('admin.pickets.edit', compact('picket', 'days','students'));
+        return view('admin.pickets.edit', compact('picket', 'days','gurus'));
     }
 
     /**
@@ -97,12 +98,12 @@ class PicketController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'student' => 'required|exists:students,id',
+            'guru' => 'required|exists:gurus,id',
             'day' => 'required|exists:days,id',
         ]);
 
         $create = Picket::findOrFail($id)->update([
-            'student_id' => $request->student,
+            'guru_id' => $request->guru,
             'day_id' => $request->day,
         ]);
 

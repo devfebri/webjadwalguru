@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddForeignPickets extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
@@ -15,7 +15,7 @@ class AddForeignPickets extends Migration
     {
         Schema::table('pickets', function (Blueprint $table) {
             $table->foreign('day_id')->references('id')->on('days');
-            $table->foreign('student_id')->references('id')->on('students');
+            $table->foreign('guru_id')->references('id')->on('gurus');
         });
     }
 
@@ -27,7 +27,8 @@ class AddForeignPickets extends Migration
     public function down()
     {
         Schema::table('pickets', function (Blueprint $table) {
-            //
+            $table->dropForeign(['day_id']);
+            $table->dropForeign(['guru_id']);
         });
     }
-}
+};
