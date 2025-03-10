@@ -63,7 +63,7 @@
                                                     @foreach($articles as $article)
                                                         <tr>
                                                             <th scope="row">{{ $article->id }}</th>
-                                                            <td><img src="{{ Storage::url('images/articles/'.$article->thumbnail_image_name) }}" alt=""  style="width:50px"></td>
+                                                            <td><img src="{{ asset('images/articles/'.$article->thumbnail_image_name) }}" alt=""  style="width:50px"></td>
                                                             <td>{{ $article->title }}</td>
                                                             <td>{{substr($article->content,0,50)}}..</td>
                                                             <td>{{ Carbon\Carbon::parse($article->created_at)->format('d F Y H:i:s') }}</td>

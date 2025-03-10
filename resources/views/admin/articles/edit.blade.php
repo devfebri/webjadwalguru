@@ -63,7 +63,7 @@
                                                             <strong>{{ $message }}</strong>
                                                         </span>
                                                     @enderror
-                                                    <img src="{{ Storage::url('images/articles/'.$article->thumbnail_image_name) }}" alt="current image" srcset="">
+                                                    <img src="{{ asset('images/articles/'.$article->thumbnail_image_name) }}" alt="current image" srcset="">
                                                 </div>
                                             </div>
                                             <button type="submit" class='btn btn-primary float-right'>Submit</button>

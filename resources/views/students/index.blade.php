@@ -22,7 +22,7 @@
                         <div class="card">
                             <div class="row">
                                 <div class="col-4">
-                                    <img src="{{ Storage::url('images/students/'.$student->image_name) }}" alt="{{$student->name }}">
+                                    <img src="{{ asset('images/students/'.$student->image_name) }}" alt="{{$student->name }}">
                                 </div>
                                 <div class="col-8 py-3 px-3">
                                     <div class="student-name mb-2">{{$student->name}}</div>

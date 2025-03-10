@@ -85,7 +85,7 @@
                                                 <label for="" class='col-md-2 col-form-label'>Gambar</label>
                                                 <div class="col-md-10">
                                                     <input type="file" class="form-control-file" name='avatar'>
-                                                    <img src="{{Storage::url('images/gurus/'.$guru->avatar)}} " alt="" srcset="" style="width: 100px"">
+                                                    <img src="{{asset('images/gurus/'.$guru->avatar)}} " alt="" srcset="" style="width: 100px"">
                                                     @error('avatar')
                                                     <span class="invalid-feedback" role="alert">
                                                         <strong>{{ $message }}</strong>

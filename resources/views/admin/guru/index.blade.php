@@ -63,7 +63,7 @@
                                 @foreach($guru as $row)
                                 <tr>
                                     <th scope="row">{{ $loop->iteration }}</th>
-                                    <td><img src="{{ Storage::url('images/gurus/'.$row->avatar) }}" alt="" srcset="" style="width:50px"></td>
+                                    <td><img src="{{ asset('images/gurus/'.$row->avatar) }}" alt="" srcset="" style="width:50px"></td>
                                     <td>{{ $row->name }}</td>
                                     <td>{{ $row->jk }}</td>
                                     <td>{{ $row->nohp }}</td>

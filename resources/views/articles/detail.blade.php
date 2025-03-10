@@ -10,7 +10,7 @@
 <section class="article">
     <div class="container">
         <div class="card">
-            <img src="{{ Storage::url('images/articles/'.$article->thumbnail_image_name) }}" class='card-img-top'>
+            <img src="{{ asset('images/articles/'.$article->thumbnail_image_name) }}" class='card-img-top'>
             <div class="card-body pt-4">
                 <div class="card-detail">
                     <span><i class="fas fa-user-circle"></i> {{ $article->author->name }}</span> <span class='ml-10'>{{ Carbon\Carbon::parse($article->created_at)->format('d F Y H:i:s') }}</span>

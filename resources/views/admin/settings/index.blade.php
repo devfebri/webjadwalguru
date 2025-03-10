@@ -53,7 +53,7 @@
                                                             <strong>{{ $message }}</strong>
                                                         </span>
                                                     @enderror
-                                                    <img src="{{ Storage::url('/images/logo/'.config('web_config')['WEB_LOGO']) }}" alt="logo" height="50" class='mt-4'>
+                                                    <img src="{{ asset('/images/logo/'.config('web_config')['WEB_LOGO']) }}" alt="logo" height="50" class='mt-4'>
                                                 </div>
                                             </div>
                                             <div class="form-group row">
@@ -65,7 +65,7 @@
                                                             <strong>{{ $message }}</strong>
                                                         </span>
                                                     @enderror
-                                                    <img src="{{ Storage::url('/images/logo/'.config('web_config')['WEB_FAVICON']) }}" alt="favicon" width="50"  class='mt-4'>
+                                                    <img src="{{ asset('/images/logo/'.config('web_config')['WEB_FAVICON']) }}" alt="favicon" width="50"  class='mt-4'>
                                                 </div>
                                             </div>
                                             <div class="form-group row">
@@ -77,7 +77,7 @@
                                                             <strong>{{ $message }}</strong>
                                                         </span>
                                                     @enderror
-                                                    <img src="{{ Storage::url('/images/logo/'.config('web_config')['WEB_LOGO_WHITE']) }}" alt="logo" height="50" class='mt-4'>
+                                                    <img src="{{ asset('/images/logo/'.config('web_config')['WEB_LOGO_WHITE']) }}" alt="logo" height="50" class='mt-4'>
                                                 </div>
                                             </div>
                                             <div class="form-group row">

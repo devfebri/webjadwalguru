@@ -11,7 +11,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <img src="{{ Storage::url('images/students/'.$student->image_name) }}" alt="">
+                <img src="{{ asset('images/students/'.$student->image_name) }}" alt="">
             </div>
             <div class="col-md-9 sm:mt-5">
                 <h1 class='mb-3'>{{ $student->name }}</h1>

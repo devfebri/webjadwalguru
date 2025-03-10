@@ -3,12 +3,12 @@
 @extends('layouts.app')
 
 @section('content')
-@section('logo', Storage::url('/images/logo/'.config('web_config')['WEB_LOGO_WHITE']))
+@section('logo', asset('/images/logo/'.config('web_config')['WEB_LOGO_WHITE']))
 @push('styles')
     <link rel="stylesheet" href="{{asset('css/front.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/icons.css')}}">
 @endpush
-<section class="hero" style="background-image: linear-gradient(to right, rgba(255, 0, 170, 0.9), rgba(255, 0, 149, 0.9)),url({{Storage::url("images/front/".config('web_config')['HERO_BACKGROUND_IMAGE'])}})">
+<section class="hero" style="background-image: linear-gradient(to right, rgba(255, 0, 170, 0.9), rgba(255, 0, 149, 0.9)),url({{asset("images/front/".config('web_config')['HERO_BACKGROUND_IMAGE'])}})">
     <div class="container">
         <div class="row">
             <div class="col-md-8 offset-md-2">
@@ -34,7 +34,7 @@
                         <div class="card">
                             <div class="row">
                                 <div class="col-4">
-                                    <img src="{{ Storage::url('images/students/'.$student->image_name) }}" alt="{{$student->name }}">
+                                    <img src="{{ asset('images/students/'.$student->image_name) }}" alt="{{$student->name }}">
                                 </div>
                                 <div class="col-8 py-3 px-3">
                                     <div class="student-name mb-2">{{$student->name}}</div>
@@ -63,7 +63,7 @@
                 @foreach($articles as $article)
                 <div class="col-md-4 mb-3">
                     <div class="card">
-                        <img src="{{ Storage::url('images/articles/'.$article->thumbnail_image_name) }}" alt="" class="card-img-top">
+                        <img src="{{ asset('images/articles/'.$article->thumbnail_image_name) }}" alt="" class="card-img-top">
                         <div class="card-body">
                             <h3 class="card-title"><a href="{{route('article.show', ['id' => $article->id])}}">{{ $article->title }}</a></h3>
                             <p class="card-description">{{ substr($article->content, 0, 110) }}. <a href="#">Lihat selengkapnya</a></p>
