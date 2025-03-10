@@ -3,7 +3,7 @@
 
 @section('css')
         <!-- Plugins css -->
-        <link href="{{ asset('assets/plugins/sweet-alert2/sweetalert2.min.css')}}" rel="stylesheet">
+        <link href="{{ asset('/assets/plugins/sweet-alert2/sweetalert2.min.css')}}" rel="stylesheet">
 @endsection
 @section('title', 'Mata Pelajaran')
 
@@ -99,6 +99,6 @@
 @endsection
 
 @section('script')
-        <script src="{{ asset('assets/plugins/sweet-alert2/sweetalert2.min.js')}}"></script>
+        <script src="{{ asset('/assets/plugins/sweet-alert2/sweetalert2.min.js')}}"></script>
         <script src="{{ asset('js/main.js') }}"></script>
 @endsection

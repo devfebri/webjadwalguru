@@ -15,13 +15,13 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-        <link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico')}}">
+        <link rel="shortcut icon" href="{{ asset('/assets/images/favicon.ico')}}">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/front.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/icons.css')}}">
+    <link rel="stylesheet" href="{{asset('/assets/css/icons.css')}}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     @stack('styles')
 </head>

@@ -3,7 +3,7 @@
 @extends('layouts.master')
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('assets/plugins/morris/morris.css')}}">
+<link rel="stylesheet" href="{{ asset('/assets/plugins/morris/morris.css')}}">
 @endsection
 @section('title', 'Dashboard')
 @section('content')
@@ -91,7 +91,7 @@
                                         <tr>
                                             <td>{{ $article->id }}</td>
                                             <td>{{ $article->author->name }}</td>
-                                            <td><img src="{{ asset('images/articles/'.$article->thumbnail_image_name) }}" alt=""  style="width:50px"></td>
+                                            <td><img src="{{ asset('/storage/images/articles/'.$article->thumbnail_image_name) }}" alt=""  style="width:50px"></td>
                                             <td>{{ $article->title }}</td>
                                             <td>{{ Carbon\Carbon::parse($article->created_at)->format('d F Y H:i:s') }}</td>
                                         </tr>
@@ -115,8 +115,8 @@
 
 @section('script')
 		<!--Morris Chart-->
-        <script src="{{ asset('assets/plugins/morris/morris.min.js')}}"></script>
-        <script src="{{ asset('assets/plugins/raphael/raphael-min.js')}}"></script>
+        <script src="{{ asset('/assets/plugins/morris/morris.min.js')}}"></script>
+        <script src="{{ asset('/assets/plugins/raphael/raphael-min.js')}}"></script>
 
-		<script src="{{ asset('assets/pages/dashboard.js')}}"></script>
+		<script src="{{ asset('/assets/pages/dashboard.js')}}"></script>
 @endsection

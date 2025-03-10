@@ -4,9 +4,9 @@
 @section('logo', asset('/images/logo/'.config('web_config')['WEB_LOGO_WHITE']))
 @push('styles')
     <link rel="stylesheet" href="{{asset('css/front.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/icons.css')}}">
+    <link rel="stylesheet" href="{{asset('/assets/css/icons.css')}}">
 @endpush
-<section class="hero" style="background-image: linear-gradient(to right, rgba(255, 0, 170, 0.9), rgba(255, 0, 149, 0.9)),url('storage/images/front/bersama2.jpg')">
+<section class="hero" style="background-image: linear-gradient(to right, rgba(255, 0, 170, 0.9), rgba(255, 0, 149, 0.9)),url('{{ asset('storage/images/front/bersama2.jpg') }}')">
 
     <div class="container">
         <div class="row">
