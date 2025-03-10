@@ -3,7 +3,7 @@
 @extends('layouts.master')
 
 @section('css')
-<link rel="stylesheet" href="{{ URL::asset('assets/plugins/morris/morris.css')}}">
+<link rel="stylesheet" href="{{ asset('assets/plugins/morris/morris.css')}}">
 @endsection
 @section('title', 'Dashboard')
 @section('content')
@@ -115,8 +115,8 @@
 
 @section('script')
 		<!--Morris Chart-->
-        <script src="{{ URL::asset('assets/plugins/morris/morris.min.js')}}"></script>
-        <script src="{{ URL::asset('assets/plugins/raphael/raphael-min.js')}}"></script>
+        <script src="{{ asset('assets/plugins/morris/morris.min.js')}}"></script>
+        <script src="{{ asset('assets/plugins/raphael/raphael-min.js')}}"></script>
 
-		<script src="{{ URL::asset('assets/pages/dashboard.js')}}"></script>
+		<script src="{{ asset('assets/pages/dashboard.js')}}"></script>
 @endsection

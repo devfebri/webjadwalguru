@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <script src="{{ URL::asset('assets/js/initTheme.js')}}"></script>
+  <script src="{{ asset('assets/js/initTheme.js')}}"></script>
 
   <!-- Begin page -->
   <div id="wrapper">
